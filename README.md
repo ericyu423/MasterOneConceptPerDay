@@ -9,7 +9,7 @@ Master One Small Concept Per Day, and storage of my code examples
 
 reference: https://developer.apple.com/reference/uikit/uiview   -Methods to Override-
 
-Subclassing initializations
+Subclassing, initializations
 
 
 
