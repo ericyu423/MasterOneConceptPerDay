@@ -2,7 +2,7 @@
 
 
 
-Master One Small Concept Per Day, and storage of my code examples
+Master One Small Concept Per Day, and storage for my code snippets
 
 
 # 5/10/2017
