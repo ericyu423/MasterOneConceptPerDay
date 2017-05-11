@@ -21,3 +21,12 @@ TableviewController with MVC design pattern
 
 
 
+#  Other Topics for the Week
+
+*@escaping  
+
+
+
+
+
+
