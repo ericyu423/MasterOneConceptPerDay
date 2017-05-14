@@ -13,6 +13,11 @@ Subclassing, initializations
 
 TableviewController, ContainvewController with MVC 
 
+# 5/14/2017
+
+ scrollView - Storyboard
+ scrollView - Programmically
+
 
  
 
