@@ -1,0 +1,46 @@
+5/14/2017
+
+
+note: scrollView usually need content size, so once u add the content in scroll view can move around
+
+Normal View:
+
+View
+  View  //constraint to all edges
+     View  //constraint to all edeges
+Warning 0: everything is good
+
+
+view(UIView)
+   scrollView(UIScroll)  //constraint to all edges
+        contentView(UIView)  //constraint to all edeges)
+        
+warning 2: Need constraints for X position or width, Need constraints for Y position or height
+
+
+what happen
+
+scroll view need to have content width and heights speicified.
+
+so once we added a subview it notice it does not have a width and height.
+
+fixing the problem.
+step 1.  let content width = the size of view width
+
+view.width = context.width -> scrollView width is now set to view width  
+// basically we tell scroll view to set it width to content's width
+
+*we can set the width of scroll view to main view is pretty much the same thing (the point is to give width to the scroll view)
+
+
+step 2. once the width is we only have 1 warning left "Need constraints for Y position or height"
+
+to stretch scrollable area set the bottom of label to the bottom of context view.
+
+#  Reason as the size of label grow you strech the height of the content
+
+-----------------------------------
+
+
+
+
