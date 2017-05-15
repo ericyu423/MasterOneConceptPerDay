@@ -19,6 +19,11 @@ TableviewController, ContainvewController with MVC
  scrollView - Programmically
 
 
+# 5/15/2017
+
+ combine scrollViews with more programmatically autolayous
+ practicing coverting NSLayoutConstraint to Layout Anchors
+
  
 
 
