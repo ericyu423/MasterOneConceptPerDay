@@ -41,6 +41,33 @@ to stretch scrollable area set the bottom of label to the bottom of context view
 
 -----------------------------------
 
+#  ScrollView With AutoLayout that goes up when keyboard present
+
+There are few ways to make this work found a solution online but doesn't work very well but worth a mention
+1. view(UIView) 
+      scrollView(UIScroll)  //constraint to all edges
+         contentView(UIView)  //constraint to all edeges
+         
+a) set contentView width directly
+b) set contentView width indirectly.
+example
+  center textView centerY
+  textView top anchor = contentview.topanchor
+  this will indirectly fix contentview width 
+  
+use the following code to find top and bottom insect 
+
+          var scrollViewInsets = UIEdgeInsets.zero //UIEdgeInsetsMake(0,0,0,0)
+          scrollViewInsets.top = scrollView.bounds.size.height/2.0;
+          scrollViewInsets.top -= contentView.bounds.size.height/2.0;
+
+          scrollViewInsets.bottom = scrollView.bounds.size.height/2.0
+          scrollViewInsets.bottom -= contentView.bounds.size.height/2.0;
+          scrollViewInsets.bottom += 1
+
+          scrollView.contentInset =  scrollViewInsets
+          
+
 
 
 
