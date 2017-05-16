@@ -1,0 +1,92 @@
+        import UIKit
+
+
+
+        //Part1 From Code
+
+        class RatingControl1: UIStackView {
+            //from code//
+            override func draw(_ rect: CGRect) {
+                // this is called when layout happens
+                // you don't need it if you are not drawing
+
+            }
+
+
+            //these 2 come in pair
+            override init(frame: CGRect) {
+                super.init(frame: frame)
+                //called when let r = RationalControl()
+                //init not needed unless you want to customize 
+                //stuff
+            }
+
+            required init(coder: NSCoder) {
+                super.init(coder: coder)
+                //this is not called
+            }
+        }
+
+        //part 2 From StoryBoard
+        class RatingControl2: UIStackView {
+            override func draw(_ rect: CGRect) {
+                // this is called if this class is selected 
+                // in storyboard
+            }
+
+            override init(frame: CGRect) {
+                super.init(frame: frame)
+                //this is untouched from storyboard
+            }
+
+
+            //From storyboard init(frame: CGRect) is not needed
+            //will not be called
+            required init(coder: NSCoder) {
+                super.init(coder: coder)
+                //this is called from storyboard
+            }
+        }
+
+        //part 3 From StoryBoard who goes first 
+
+        class myButtonTest: UIButton {
+
+            override func awakeFromNib(){
+
+                //I am 2nd after load from storyboard
+
+            }
+
+            override func draw(_ rect: CGRect) {
+                //I am eher after load from storyboard
+            }
+
+            required init?(coder aDecoder: NSCoder) {
+                super.init(coder: aDecoder)
+
+                // I am 1st after load from storyboard
+            }
+
+        }
+
+        class Cell: UITableViewCell {
+            //from story board you need this
+            override func awakeFromNib() {
+                super.awakeFromNib()
+                // Initialization code
+            }
+            //from code you need this
+            override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+                super.init(style: style, reuseIdentifier: reuseIdentifier)
+            }
+
+            required init?(coder aDecoder: NSCoder) {
+                fatalError("init(coder:) has not been implemented")
+            }
+
+
+        }
+
+
+
