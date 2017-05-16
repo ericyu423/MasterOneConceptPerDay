@@ -1,0 +1,90 @@
+//
+//  ViewController.swift
+//  ScrollTextFieldsUp
+//
+//  Created by eric yu on 5/14/17.
+//  Copyright © 2017 eric yu. All rights reserved.
+//
+
+import UIKit
+class ScrollViewController: UIViewController {
+    
+    var numRows: Int = 40
+    
+    var scrollView: UIScrollView = {
+        let sv = UIScrollView()
+        sv.translatesAutoresizingMaskIntoConstraints = false
+        sv.backgroundColor = .green
+        return sv
+    }()
+    
+    var contentView: UIView = {
+        let cv = UIView()
+        cv.translatesAutoresizingMaskIntoConstraints = false
+        
+        return cv
+        
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        scrollWithContentView()
+      
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        print(scrollView.contentSize)
+    }
+    
+    func scrollWithContentView(){
+        
+        
+        scrollView.anchor(top: topLayoutGuide.topAnchor, left: view.leftAnchor, bottom: bottomLayoutGuide.topAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        scrollView.addSubview(contentView)
+        
+        
+        contentView.anchor(top: scrollView.topAnchor, left: scrollView.leftAnchor, bottom: scrollView.bottomAnchor, right: scrollView.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: view.frame.width, height: 0)
+        
+        var latestViewLayout: UIView! = nil
+        
+        for i in 0..<numRows {
+            
+            
+            let textField = UITextField()
+            textField.placeholder = "row \(i+1)"
+            textField.borderStyle = .roundedRect
+            
+            
+            switch (i) {
+            case 0:
+                self.contentView.addSubview(textField)
+                textField.anchor(top: self.contentView.topAnchor, left: self.contentView.leftAnchor, bottom: nil, right: self.contentView.rightAnchor, paddingTop: 30, paddingLeft: 20, paddingBottom: 20, paddingRight: 20, width: 0, height: 30)
+                
+                latestViewLayout = textField
+                
+                break;
+            case numRows - 1:
+                
+                self.contentView.addSubview(textField)
+                textField.anchor(top: latestViewLayout.bottomAnchor, left: self.contentView.leftAnchor, bottom: contentView.bottomAnchor, right: self.contentView.rightAnchor, paddingTop: 30, paddingLeft: 20, paddingBottom: 20, paddingRight: 20, width: 0, height: 30)
+                
+                latestViewLayout = textField
+                
+                
+                break;
+            default:
+                
+                self.contentView.addSubview(textField)
+                textField.anchor(top: latestViewLayout.bottomAnchor, left: self.contentView.leftAnchor, bottom: nil, right: self.contentView.rightAnchor, paddingTop: 30, paddingLeft: 20, paddingBottom: 20, paddingRight: 20, width: 0, height: 30)
+                
+                latestViewLayout = textField
+                break;
+            }
+            
+        }
+        
+        
+    }
+ 
+}
