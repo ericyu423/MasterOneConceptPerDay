@@ -1,0 +1,28 @@
+reference: http://stackoverflow.com/questions/39504180/escaping-closures-in-swift
+
+
+Given example
+
+      class MyBrain {
+          var closure: (() -> Void)?
+
+          func someMethod(closure: @escaping () -> Void) {
+              self.closure = closure
+          }
+
+      }
+
+      class MyViewController {
+
+          var number = 0
+
+          var myBrain = MyBrain()
+
+          func aMethod() {
+              myBrain.someMethod{
+                  self.number = 1 }
+          }
+      }
+      
+      
+the instanace capture and store the closure from MyBrain 
