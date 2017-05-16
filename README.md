@@ -23,6 +23,10 @@ TableviewController, ContainvewController with MVC
 
  combine scrollViews with more programmatically autolayous
  practicing coverting NSLayoutConstraint to Layout Anchors
+ 
+ --stop before making textviews scroll up automatically (not an efficent way to use my time right now)
+ 
+ # 5/16/2017 
 
  
 
