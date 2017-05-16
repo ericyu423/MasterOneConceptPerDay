@@ -30,11 +30,13 @@ TableviewController, ContainvewController with MVC
  
    Multithreading
    
-   iot /raspberry pi
+   escaping functions 
+   
+   Adrduino
    
    Continue with functional Programming text book
    
-   escaping functions 
+   
 
  
 
