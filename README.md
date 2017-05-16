@@ -1,4 +1,4 @@
-# MasterOneConceptPerDay
+# Learning/Review Record 
 
 
 
@@ -26,7 +26,11 @@ TableviewController, ContainvewController with MVC
  
  --stop before making textviews scroll up automatically (not an efficent way to use my time right now)
  
- # 5/16/2017 
+ # 5/16/2017 (tomorrow)
+ 
+   Multithreading
+   ioT Rasbaer pie
+   Continue with functional Programming text book
 
  
 
