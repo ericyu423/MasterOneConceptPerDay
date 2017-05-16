@@ -29,8 +29,12 @@ TableviewController, ContainvewController with MVC
  # 5/16/2017 (tomorrow)
  
    Multithreading
+   
    ioT Rasbaer pie
+   
    Continue with functional Programming text book
+   
+   escaping functions 
 
  
 
