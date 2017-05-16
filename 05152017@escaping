@@ -1,4 +1,5 @@
 reference: http://stackoverflow.com/questions/39504180/escaping-closures-in-swift
+           https://learnappmaking.com/escaping-closures-swift-3/
 
 
 Given example
@@ -26,3 +27,14 @@ Given example
       
       
 the instanace capture and store the closure from MyBrain 
+
+ example of an escaping closure is a completion handler. 
+ It’s executed in the future, when a lengthy task completes,
+ so it outlives the function it was created in
+An escaping closure outlives the function it was passed to
+
+asynchronous programming: a closure that’s executed asynchronously 
+always escapes its original context.
+
+
+
