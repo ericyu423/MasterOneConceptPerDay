@@ -145,7 +145,9 @@ helper class
         
         
 <p align="center">
-  <img src= https://github.com/ericyu423/MasterOneConceptPerDay/blob/master/bi.png" width="400"/>  
+  <img src= "https://github.com/ericyu423/MasterOneConceptPerDay/blob/master/drawingAndAnimating/bi.png" width="400"/>  
+  
+  
 </p>
         
         
@@ -155,7 +157,7 @@ helper class
         gradient.locations = [percentageCompleted, 1]
         
 <p align="center">
-  <img src= https://github.com/ericyu423/MasterOneConceptPerDay/blob/master/true.png" width="400"/>
+  <img src= "https://github.com/ericyu423/MasterOneConceptPerDay/blob/master/drawingAndAnimating/bi.pngtrue.png" width="400"/>
 </p>
  
  
