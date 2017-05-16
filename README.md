@@ -32,7 +32,7 @@ TableviewController, ContainvewController with MVC
    
    escaping functions 
    
-   Adrduino..basic setup modified led loop and timing, now waiting for bluetooth hardware to arrive to move on to next step
+   Adrduino..basic setup modified led loop and timing, now waiting for bluetooth hardware to arrive to move on to next step (5/19/2017)
    
    Continue with functional Programming text book
    
