@@ -30,7 +30,7 @@ TableviewController, ContainvewController with MVC
  
    Multithreading
    
-   ioT Rasbaer pie
+   iot /raspberry pi
    
    Continue with functional Programming text book
    
