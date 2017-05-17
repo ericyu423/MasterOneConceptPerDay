@@ -50,8 +50,43 @@ step 1. taking comma separated files and break in in to an array of string
 step 2. go through the array and add "$" 
 
 # Translate the above in a functional way
-        
-        
+
+
+ basically we have two function
+ 
+ f,g
+ and we want to make it to a composed function
+  h(x) = g(f(x))
+
+                   let twoInOneFunction = { x in
+                            formatNumWithDollarSign(content: seperateElements(x))
+                    }
+
+                    twoInOneFunction(content)
+
+//side note: this kind of remind me of
+
+                        var label: UILabel = { x in
+                        let l = UILabel()
+                        l.text = x
+                         return l
+                        }("something")
+                        
+                        
+                        
+#  Make this easier to understand 
+
+                let h = { x in print(x+1)  }
+                
+  this means we can do h( )  <--- and pass stuff into the funciton and let it do stuff
+                h(2)
+                
+                "3"
+                
+                
+ pretty simple stuff if you gave them x,y,z symbols instead of functional names that is confusing
+
+
 
 
 
