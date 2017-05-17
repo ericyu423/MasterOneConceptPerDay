@@ -90,5 +90,15 @@ step 2. go through the array and add "$"
 
 #  Custom Operators
 
+                infix operator |>
+
+                func |> <T, V>(f: @escaping (T) -> V, g: @escaping (V) -> V ) -> (T) -> V {
+                    return { x in g(f(x)) }
+                }
+                let h = seperateElements |> addDollarSign
+                h("10,20,40,30,80,60")
 
 
+"Using our |> custom operator makes our code more readable and less verbose."
+I will have to disagree with this let h = { x in print(x+1)  }  is very readable 
+this is defintely not more readable....
