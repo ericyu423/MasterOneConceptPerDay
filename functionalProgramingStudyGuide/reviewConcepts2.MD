@@ -95,10 +95,61 @@ step 2. go through the array and add "$"
                 func |> <T, V>(f: @escaping (T) -> V, g: @escaping (V) -> V ) -> (T) -> V {
                     return { x in g(f(x)) }
                 }
-                let h = seperateElements |> addDollarSign
+                
+ #  Using the customer Operator
+ 
+                       func f(_ content: String) -> [String] {
+                            let array:[String] = content.characters.split(separator: ",").map { String($0)}
+
+                            return array
+                       }
+           
+                        func g(content: [String]) -> [String] {
+                            return content.map {"$\($0)"}
+                        }
+                
+                
+                let h = f|> g
                 h("10,20,40,30,80,60")
 
 
-"Using our |> custom operator makes our code more readable and less verbose."
-I will have to disagree with this let h = { x in print(x+1)  }  is very readable 
-this is defintely not more readable....
+rewrote this in another way
+
+                        let f: (String) -> [String] = { x in content.characters.split(separator: ",").map{ String($0)}
+                        }
+
+                        let g: ([String]) -> [String] = { x in x.map{"$\($0)"} }
+
+                        let h = f |> g
+                        h("10,20,40,30,80,60")
+                        
+using type inferance 
+
+                        let f = { (x: String) in x.characters.split(separator: ",").map{ String($0)}}
+                        let g =  { (x: [String]) in x.map{"$\($0)"}}
+
+                        let h =  f |> g
+                        
+                        
+                        
+or just pass in the closure
+
+                        let h = {(x:String) in x.characters.split(separator: ",").map{ String($0)}} |> 
+                                 { (x: [String]) in x.map{"$\($0)"}}
+                                 
+                         h("10,20,40,30,80,60")
+                         
+                         
+ # after some experiment 
+ 
+ 
+                                let f = { (x: String) in x.characters.split(separator: ",").map{ String($0)}}
+                                let g =  { (x: [String]) in x.map{"$\($0)"}}
+
+                                let b = g(f("23,24"))
+                                
+                                
+                              
+                         
+ Well...this sure is better than the stupid  infix operator |>
+
