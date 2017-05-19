@@ -42,7 +42,12 @@ TableviewController, ContainvewController with MVC
    
    
 
- 
+#  5/19/2017
+
+  -- next week will focus on building an app to help me manage my notes and time --
+  
+  Goal:
+    Version 1.0 Will have it available on iTunes by the end of the month(10 days) 5/29/2017
 
 
 
