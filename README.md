@@ -49,7 +49,7 @@ TableviewController, ContainvewController with MVC
   Goal:
     Version 1.0 Will have it available on iTunes by the end of the month(10 days) 5/29/2017
 
-
+ ARC - closures next
 
 
 
