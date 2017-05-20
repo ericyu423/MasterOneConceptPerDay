@@ -51,6 +51,8 @@ TableviewController, ContainvewController with MVC
 
  ARC - closures next
 
+#  5/20/2017
 
+  Workplace storyboard bug - 2 diff proj with same file name in their repective folder. Sometimes storyboard stillconfuses the files and put IBoutlet on the wrong file sometimes, but not all the time.
 
 
