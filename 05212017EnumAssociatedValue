@@ -1,0 +1,114 @@
+Enum Associated Value (example from calculator app standford online course)
+
+
+          var operationDic: Dictionary<String,Operations> = [
+              "π": .Constant(Double.pi),
+              "e": .Constant(M_E)
+          ]
+
+          enum Operations{
+              case Constant(Double) //Constant is a type double
+
+          }
+
+          func performOperation(symbol: String){
+          
+              if let operation = operationDic[symbol]{
+                  switch operation {
+                  case .Constant(let value): currentSum = value
+                  default: break
+                  }
+              }
+              
+          }
+          
+         
+#  Steps
+
+1. operation = operationDic[symbol] 
+
+use symbol to fetch an enum case from the operation dictionary
+
+example π
+
+π fetches Operations.Constant(Double.pi) which is 3.14 very straight foward
+
+# But Why? is easier just to write, they do the same thing
+
+            var valueDic : Dictionary<String,Double> = [
+                "π": Double.pi,
+                "e": M_E
+
+            ]
+
+            valueDic["π"] = 3.14
+
+in this case there is no reason to write enum, but we want to make the dictionary accept other 
+things other than enum.
+
+# Now try to add operation square root (This is why we need enum)
+
+         var valueDic : Dictionary<String,Double> = [
+                    "π": Double.pi,
+                    "e": M_E
+                    "√":  ....
+                ]
+                
+                
+#  Really understand What is going on                
+               
+            var operationDic: Dictionary<String,Operations> = [
+                "π": .Constant(Double.pi),
+                "e": .Constant(M_E),
+                "√": .UnitaryOperation(sqrt)  //func sqrt(_: Double) -> Double
+            ]
+            
+            enum Operations{
+                case Constant(Double) //Constant is a type double
+                case UnitaryOperation((Double) -> Double)
+
+            }
+
+            func performOperation(symbol: String){
+                if let operation = operationDic[symbol]{
+                    switch operation {
+                    case .Constant(let x): currentSum = x
+                    case .UnitaryOperation(let x): currentSum = x(currentSum)
+                    }
+                }
+            }
+            
+# Understand enum asoociated value
+
+         enum Operations{
+                        case Constant(Double)    //Constant is a type double
+                        case UnitaryOperation((Double) -> Double)
+          }
+          
+Operations.Constant(Double)  can take in a double any double
+Operation.UnitaryOperation((Double) -> Double)  This can take any functions that is of (Double) -> Double
+for example "sqrt"  - //func sqrt(_: Double) -> Double
+
+
+
+In the dictionary we define sqareroot symbol with .UnitaryOperation(sqrt) 
+
+ when we perform operation case .UnitaryOperation(let x): currentSum = x(currentSum)
+ 
+ # This part is a bit confusing
+ 
+ case .UnitaryOperation(let x)        
+ 
+ when we do operation = operationDic[symbol]
+ 
+ in the example of the symbol "√" we fetched .UnitaryOperation(sqrt)
+ we could of fetching some else too if the symbol is different
+
+
+ .UnitaryOperation(let x) will be called whenever we have  .UnitaryOperation(....)
+ 
+ x will be the assoicated function we can use
+ 
+ 
+ 
+
