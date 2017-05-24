@@ -55,4 +55,7 @@ TableviewController, ContainvewController with MVC
 
   Workplace storyboard bug - 2 diff proj with same file name in their repective folder. Sometimes storyboard stillconfuses the files and put IBoutlet on the wrong file sometimes, but not all the time.
 
+# 5/24/2017
 
+ user interaction enable in storyboard was accidently unclicked, which causes view unable to reconized gesture
+ it took almost an hour trying to fix it.
