@@ -40,3 +40,69 @@ var colorNameToUse = userDefinedColorName ?? defaultColorName
 
 defaultColorName should have a default color name. if you put nil xcode 9 gives you a compiler warning.
 
+
+# Multiline String Literals
+
+var myString = """
+   a
+   b
+   c
+   d
+"""
+
+prints
+    a 
+    b
+    c
+    d
+    
+var myString = """
+   a
+      b
+   c
+   d
+   """
+   
+white space before """ is your margin basically
+    
+    
+
+let softWrappedQuotation = """
+The White Rabbit put on his spectacles.  "Where shall I begin, \
+please your Majesty?" he asked.
+
+"Begin at the beginning," the King said gravely, "and go on \
+till you come to the end; then stop."
+"""
+
+"\" continue the line (so the sentance won't get too long in xcode where you can't see it)
+
+
+
+let threeDoubleQuotes = """
+Escaping the first quote \"""
+Escaping all three quotes \"\"\"
+"""
+print (threeDoubleQuotes)
+
+Escaping the first quote """
+Escaping all three quotes """
+
+
+# Initializing an Empty String
+var s = ""
+var s = string()
+// these two are equivalent to each other
+
+
+# workign with characters
+
+for x in "abcde" {
+    print(x)
+}
+
+a
+b
+c
+d
+e
