@@ -62,6 +62,7 @@ TableviewController, ContainvewController with MVC
  
 # 9/22/2017
 
-HackerRank Cracking the Coding InterviewArrays: 
+HackerRank Cracking the Coding Interview (all questions will be kept in the same file)
 
-Left Rotation (Made it work but the code is very messy will fix it when I have time)
+Arrays: Left Rotation - (Made it work but the code is very messy will fix it when I have time)
+
