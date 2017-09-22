@@ -59,3 +59,9 @@ TableviewController, ContainvewController with MVC
 
  user interaction enable in storyboard was accidently unclicked, which causes view unable to reconized gesture
  it took almost an hour trying to fix it.
+ 
+# 9/22/2017
+
+HackerRank Cracking the Coding InterviewArrays: 
+
+Left Rotation (Made it work but the code is very messy will fix it when I have time)
