@@ -1,0 +1,16 @@
+# pop up up story board
+
+step
+
+1. drag on to of the view controller (little square on top)
+2. control drag @IBOutlet timePicker
+
+
+link it to something for example
+
+UITextField
+
+UITextField.inputView = timePicker
+
+this will make timepicker popup when user click on textfield
+
