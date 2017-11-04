@@ -26,9 +26,43 @@ func curried take and x in and define a function (String)->Float which is define
         }
         let gotFirstStillNeedSecond = getTwoThings(first: "A") //(String) -> String
         let gotSecond = gotFirstStillNeedSecond("B")
+
+# Tail Recursion  
+          
+          //normal recursion
+          func ifactorial (n: Int) -> Int {
+              if n == 0 || n == 1 {
+                  return 1
+              }else {
+                  return n * factorial (n: n-1)
+              }
+          }
+
+          print(ifactorial(n:3))
+          ifactorial(n:3)
+          3 * ifactorial(n:2)
+          2 * ifactorial(n:1)  with substitution  2 * 1
+        
+          
+          //tail
+          func factorial (n: Int, currentFactorial: Int = 1) -> Int {
+              if n == 0 {
+                  return currentFactorial
+              }else {
+                  return factorial (n: n - 1, currentFactorial: currentFactorial * n)
+              }
+          }
+
+          print(factorial(n:3))
+          
+          factorial(n: 3, currentFactorial: 1)
+          factorial(n: 2, currentFactorial: 1 * 3)   // n = 3
+          factorial(n: 1, currentFactorial: 3 * 2)   // n = 2
+          factorial(n: 0, currentFactorial: 6 * 1) -> n = 0 => currentFactorial = 6
+    
         
         
-# Recursion 
+# Baisc Recursion 
 
 I hate one-liners, is like you figure out a useless trick that makes no god damn difference to the complier 
 
