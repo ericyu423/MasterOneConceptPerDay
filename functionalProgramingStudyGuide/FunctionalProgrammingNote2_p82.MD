@@ -1,5 +1,12 @@
+# Memorization
 
-#Curried
+
+
+
+
+
+
+# Curried
 
 basically definting a function that can be used to define another function while setting a variable 
 
